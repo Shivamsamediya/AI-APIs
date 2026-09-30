@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "c1a2e3b4-5678-90ab-cdef-1234567890ab",
+		"name": "Gemini AI Beginner API",
+		"description": "Postman collection to test our FastAPI Gemini Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Check Server Status (Root)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				},
+				"description": "API chal rahi hai ya nahi check karne ke liye is endpoint ko call karein."
+			},
+			"response": [
+				{
+					"name": "Sample Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Welcome to Gemini AI API backend! Server mast chal raha hai.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "2. Chat with Gemini AI",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Hello! Main Python FastAPI seekh raha hu, mujhe thoda motivate karo!\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/chat",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"chat"
+					]
+				},
+				"description": "User ka message backend ko bhejta hai aur Gemini AI ka reply JSON format me wapas aata hai."
+			},
+			"response": [
+				{
+					"name": "Sample Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"Hello! Main Python FastAPI seekh raha hu, mujhe thoda motivate karo!\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/chat",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"chat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"reply\": \"Bahut badhiya! Python aur FastAPI seekhna ek bahut accha decision hai. Lagay raho, tum zaroor ek acche developer banoge!\"\n}"
+				}
+			]
+		}
+	]
+}
